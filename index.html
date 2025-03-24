@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Software Companies In the US</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0050C8;
+            --secondary-color: #FF5757;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #ffffff;
+            --highlight: #4CAF50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #f8f9fa;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .headline {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        
+        .subheadline {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+        
+        .highlight-green {
+            color: #4CAF50;
+        }
+        
+        .highlight-blue {
+            color: #2196F3;
+        }
+        
+        .highlight-purple {
+            color: #9C27B0;
+        }
+        
+        .highlight-orange {
+            color: #FF9800;
+        }
+        
+        .video-container {
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            margin: 20px 0 60px;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            background-color: #e13e3e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .benefits-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-text {
+            color: var(--light-text);
+            font-size: 16px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        
+        .proof-section {
+            padding: 60px 0;
+        }
+        
+        .proof-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .proof-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .steps-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .step-item {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-weight: 700;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            padding: 30px 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 20px;
+            }
+            
+            .subheadline {
+                font-size: 28px;
+            }
+            
+            .benefit-item {
+                min-width: 100%;
+            }
+            
+            .step-item {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="headline">For Software Companies In the US:</h1>
+            <h2 class="subheadline">How to Generate An Additional <span class="highlight-green">$1,760,000</span> In Project Deals In <span class="highlight-blue">9 Weeks</span> Using <span class="highlight-purple">Unique Offer Funnels</span> And <span class="highlight-orange">Profit Multipliers</span></h2>
+            
+            <!-- Video Container -->
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/1068863613" allowfullscreen></iframe>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="https://calendly.com/alex-info-akleadz" class="cta-button">Book A Discovery Call</a>
+        </div>
+    </header>
+    
+
+    
+    <!-- Proof Section -->
+    <section class="proof-section">
+        <div class="container">
+            <h2 class="section-title">Proven Results</h2>
+            
+            <div class="proof-item">
+                <h3 class="proof-title">$1,760,000 in Pipeline in Just 9 Weeks</h3>
+                <p>We generated an additional <strong class="highlight-green">$1,760,000</strong> in the pipeline for our software client within <strong>9 weeks</strong>, <strong>doubling</strong> their previous results.</p>
+            </div>
+            
+            <div class="proof-item">
+                <h3 class="proof-title">Enterprise Meetings with Companies Like Nestlé</h3>
+                <p>We've arranged calls about starting new projects with enterprise clients like <strong>Nestlé</strong> for our software clients.</p>
+            </div>
+            
+            <div class="proof-item">
+                <h3 class="proof-title">$300,000 in Opportunities in Just 3 Days</h3>
+                <p>Generated 2 sales opportunities worth <strong class="highlight-green">$300,000</strong> for one of our software clients in <strong>3 days</strong>.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Generate $1,760,000 in New Project Deals?</h2>
+            <p class="cta-subtitle">Book a discovery call today to see how our proven process can work specifically for your software company. Limited spots available - we only work with 3 clients at a time.</p>
+            <a href="https://calendly.com/alex-info-akleadz" class="cta-button">Book Your Discovery Call Now</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AK-Leadz. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
